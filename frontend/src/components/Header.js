@@ -37,28 +37,7 @@ const Header = () => {
           </Box>
         )}
         <Box display="flex" marginLeft={"auto"} >
-          {!isLoggedIn && (
-            <>
-              <Button
-                LinkComponent={Link}
-                to="/auth"
-                color="warning"
-                variant="contained"
-                sx={{ margin: 1, borderRadius: 10 }}
-              >
-                Login
-              </Button>
-              <Button
-                LinkComponent={Link}
-                to="/auth"
-                color="warning"
-                variant="contained"
-                sx={{ margin: 1, borderRadius: 10 }}
-              >
-                Signup
-              </Button>{" "}
-            </>
-          )}
+        
           {isLoggedIn && (
             <Button
               onClick={() => dispatch(authActions.logout())}
